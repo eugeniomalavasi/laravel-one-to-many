@@ -11,6 +11,7 @@
                 <th scope="col">Title</th>
                 <th scope="col">Content</th>
                 <th scope="col">Last commit</th>
+                <th scope="col">Type</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -22,6 +23,7 @@
                     </th>
                     <td>{{ $project->content }}</td>
                     <td>{{ $project->last_commit }}</td>
+                    <td>{{ $project->type?->name }}</td>
                     <td class="d-flex gap-1">
 
                         {{-- SHOW CRUD --}}

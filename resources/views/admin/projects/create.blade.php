@@ -4,7 +4,7 @@
     <div class="container mt-4">
         <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            
+
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -19,6 +19,15 @@
                 <label for="title" class="form-label">Project Name</label>
                 <input type="text" class="form-control" id="title" name="title">
             </div>
+
+            <label for="type">Choose Project type</label>
+            <select name="type_id" for="type" class="form-select">
+                <option selected></option>
+                @foreach ($types as $type)
+                <option value="{{ $type->id }}">{{ $type->name }}</option>
+                @endforeach
+            </select>
+
             <div class="mb-3">
                 <label for="content" class="form-label">Project content</label>
                 <textarea class="form-control" id="content" rows="3" name="content"></textarea>

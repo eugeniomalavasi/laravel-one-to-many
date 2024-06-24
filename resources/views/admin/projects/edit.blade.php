@@ -9,6 +9,15 @@
             <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control" id="title" name="title" value="{{ old('title',$project->title) }}">
         </div>
+
+        <label for="type">Choose Project type</label>
+        <select name="type_id" for="type" class="form-select">
+            <option selected></option>
+            @foreach ($types as $type)
+            <option value="{{ $type->id }}">{{ $type->name }}</option>
+            @endforeach
+        </select>
+        
         <div class="mb-3">
             <label for="content" class="form-label">Content</label>
             <textarea class="form-control" id="content" rows="3" name="content">{{ old('content',$project->content) }}</textarea>
