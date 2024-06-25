@@ -75,6 +75,12 @@
                   <i class="fa-solid fa-plus"></i> New Project
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.types.create' ? 'bg-secondary' : '' }}"
+                  href="{{ route('admin.types.create') }}">
+                  <i class="fa-solid fa-plus"></i> New Type
+                </a>
+              </li>
             </ul>
 
 

@@ -37,7 +37,7 @@
                 <input type="file" class="form-control" id="cover_image" name="cover_img">
             </div>
 
-            <button type="submit" class="btn btn-success">Salva</button>
+            <button type="submit" class="btn btn-success">Save</button>
         </form>
     </div>
 @endsection
